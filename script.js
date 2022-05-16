@@ -1,119 +1,133 @@
 var time = moment();
-var hours = time.format("h");
-var hour9 = $("#eventChange9")
-var hour10 = $("#eventChange10")
-var hour11 = $("#eventChange11")
-var hour12 = $("#eventChange12")
-var hour1 = $("#eventChange1")
-var hour2 = $("#eventChange2")
-var hour3 = $("#eventChange3")
-var hour4 = $("#eventChange4")
-var hour5 = $("#eventChange5")
+var hour = time.format("H");
+var hour9 = $("#hour9")
+var hour10 = $("#hour10")
+var hour11 = $("#hour11")
+var hour12 = $("#hour12")
+var hour13 = $("#hour13")
+var hour14 = $("#hour14")
+var hour15 = $("#hour15")
+var hour16 = $("#hour16")
+var hour17 = $("#hour17")
 
-// function saveNewEvent () {
-// var newEvent = changeEvent.value;
-//   localStorage.setItem("saveNewEvent", JSON.stringify(saveNewEvent));
-// };
+function saveNewEvent9 () {
+var newEvent = newEvent9.value;
+  localStorage.setItem("saveNewEvent9", JSON.stringify(saveNewEvent9));
+};
+
+console.log (saveNewEvent9)
 
 
-// function renderNewEvent() {
-//   var newEvent = JSON.parse(localStorage.getItem("newEvent"));
-//   if (newEvent !== null) {
-//   $("#eventChange").innerHTML = newEvent.text;
-//   } else {
-//     return;
-//   }
-// }
+function renderNewEvent() {
+  var newEvent = JSON.parse(localStorage.getItem("newEvent"));
+  if (newEvent !== null) {
+  $("#eventChange").innerHTML = newEvent.text;
+  } else {
+    return;
+  }
+}
 
 
 
 // Date and Time Function
 
 function displayTime() {
-    $("#currentDay").text(time.format("dddd, MMMM Do YYYY, H:mm:ss a"));               
-    setTimeout(displayTime, 1000);
+    $("#currentDay").text(time.format("dddd, MMM Do YYYY"));               
     ;
 }
 
-$(document).ready(function() {
-    displayTime();
-});
+displayTime();
+setInterval(displayTime, 1000);
 
-console.log(hours);
+console.log(hour);
 
 
-if (hours==="9") {
-    hour9.addClass ("present")}
+if (hour===9) {
+    hour9.addClass ("present")
+}
+else if (hour <9) {
+    hour9.addClass ("future")
+}
 else {
-    hour9.addClass ("past");
+    hour9.addClass ("past")
 };
 
-if (hours==="10") {
-    hour10.addClass ("present")}
-else if (hours < "10") {
+if (hour===10) {
+    hour10.addClass ("present")
+}
+else if (hour<10) {
     hour10.addClass ("future")
 }
-else (hours === "11","12","1","2","3","4","5") 
-    hour10.addClass ("past");
+else {
+    hour10.addClass ("past")
+};
 
-
-if (hours==="11") {
-    hour11.addClass ("present")}
-else if (hours < "11") {
+if (hour===11) {
+    hour11.addClass ("present")
+}
+else if (hour<11) {
     hour11.addClass ("future")
 }
-else (hours === "12","1","2","3","4","5") 
-    hour11.addClass ("past");
+else {
+    hour11.addClass ("past")
+};
 
-if (hours==="12") {
-    hour12.addClass ("present")}
-else if (hours < "12") {
+if (hour===12) {
+    hour12.addClass ("present")
+}
+else if (hour<12) {
     hour12.addClass ("future")
 }
-else (hours === "1","2","3","4","5") 
-    hour12.addClass ("past");
-
-if (hours==="1") {
-    hour1.addClass ("present")}
-else if (hours = "9","10","11","12") {
-    hour1.addClass ("future")
+else {
+    hour12.addClass ("past")
 }
-else (hours === "2","3","4","5") 
-    hour1.addClass ("past");   
 
-if (hours==="2") {
-    hour2.addClass ("present")}
-else if (hours === "9","10","11","12","1") {
-    hour2.addClass ("future")
+if (hour===13) {
+    hour13.addClass ("present")
 }
-else (hours === "3","4","5") 
-    hour2.addClass ("past");
-
-if (hours==="3") {
-    hour3.addClass ("present")}
-else if (hours === "9","10","11","12","1","2") {
-    hour3.addClass ("future")
+else if (hour<13) {
+    hour13.addClass ("future")
 }
-else (hours === "4","5") 
-    hour3.addClass ("past");
-
-if (hours==="4") {
-    hour4.addClass ("present")}
-else if (hours === "9","10","11","12","1","2","3") {
-    hour4.addClass ("future")
+else {
+    hour13.addClass ("past")
 }
-else (hours === "5") 
-    hour4.addClass ("past");
 
-if (hours==="5") {
-    hour5.addClass ("present")}
-else  
-    hour5.addClass ("future");
+if (hour===14) {
+    hour14.addClass ("present")
+}
+else if (hour<14) {
+    hour14.addClass ("future")
+}
+else {
+    hour14.addClass ("past")
+}
 
+if (hour===15) {
+    hour15.addClass ("present")
+}
+else if (hour<15) {
+    hour15.addClass ("future")
+}
+else {
+    hour15.addClass ("past")
+}
 
+if (hour===16) {
+    hour16.addClass ("present")
+}
+else if (hour<16) {
+    hour16.addClass ("future")
+}
+else {
+    hour16.addClass ("past")
+}
 
-
-
-
-
-
+if (hour===17) {
+    hour17.addClass ("present")
+}
+else if (hour<17) {
+    hour17.addClass ("future")
+}
+else {
+    hour17.addClass ("past")
+}
